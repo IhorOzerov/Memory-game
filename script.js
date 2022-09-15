@@ -10,7 +10,7 @@ const WIN_BUTTON = document.querySelector(".winButton");
 function winner() {
   setTimeout(() => {
     WIN_TABLE.style.display = 'grid';
-  }, 2000);
+  }, 1500);
 };
 
 function tryAgain() {
@@ -58,7 +58,7 @@ secondCard.style.pointerEvents = "none";
           card.style.pointerEvents = "auto";
         })
       return shuffleCard();
-      }, 3000);
+      }, 2000);
     return winner();
 }};
 
