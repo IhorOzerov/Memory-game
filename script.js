@@ -1,57 +1,74 @@
+let matchedCard = 0;
 let hasFlippedCard = false;
 let boardLocked = false;
 let firstCard, secondCard;
+const CARDS = document.querySelectorAll(".flipper");
+const MAIN_BOARD = document.querySelector(".flip-container")
 
-const flipCard = e => {
-  if (boardLocked) return;
-
-  const target = e.target.parentElement;
-
-  if (target === firstCard) return;
-
-  target.classList.add("flip");
+function flipCard(e){
+  if (boardLocked === true) { return };
   
+  const TARGET = e.target.parentElement;
+
+  if (TARGET === MAIN_BOARD) { return };
+
+  TARGET.classList.add("flip");
+ 
   if (hasFlippedCard === false) {
     hasFlippedCard = true;
-    firstCard = target;
+    firstCard = TARGET;
+    firstCard.style.pointerEvents = "none";
   } else {
-    hasFlippedCard = false;
-    secondCard = target;
+    secondCard = TARGET;
+    firstCard.style.pointerEvents = "auto"; 
 
     checkForMatch();
+    
+    hasFlippedCard = false;
   }
 };
 
-const checkForMatch = () => {
-  const isEqual = firstCard.dataset.name === secondCard.dataset.name;
-  isEqual ? disableCards() : unflipCards();
+function checkForMatch() {
+const isEqual = firstCard.dataset.name === secondCard.dataset.name;
+isEqual ? disableCards() : unflipCards();
 };
 
-    const disableCards = (e) => {
-      firstCard.removeEventListener("click", flipCard);
-      secondCard.removeEventListener("click", flipCard);
-    };
+function disableCards() {
+firstCard.style.pointerEvents = "none";
+secondCard.style.pointerEvents = "none";
+  
+  matchedCard++; 
+  if (matchedCard === 8) {
+    setTimeout(() => {                       
+      CARDS.forEach(card => {
+        card.style.pointerEvents = "auto";
+      })
+    return shuffleCard();
+    }, 2000);
+}};
 
-    const unflipCards = () => {
-      boardLocked = true;
+function unflipCards() { 
+                     
+boardLocked = true;
+                    
+  setTimeout(() => {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+    hasFlippedCard = false;
+    boardLocked = false;
+    }, 800);
+  };
+        
+  function shuffleCard() {
+    matchedCard = 0;
+    boardLocked = false;
 
-      setTimeout(() => {
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
+    CARDS.forEach(card => {
+    card.addEventListener('click', flipCard);
+    card.classList.remove("flip");
       
-        resetBoard();
-      }, 800);
-    };
-
-const resetBoard = () => {
-  hasFlippedCard = boardLocked = false;
-  firstCard = secondCard = null;
+    const RANDOM_INDEX = Math.floor(Math.random() * CARDS.length);
+    card.style.order = RANDOM_INDEX;
+  })
 };
-
-const cards = document.querySelectorAll(".flipper");
-
-cards.forEach(card => {
-  card.addEventListener('click', flipCard);
-  const randomIndex = Math.floor(Math.random() * cards.length);
-  card.style.order = randomIndex;
-});
+shuffleCard();
