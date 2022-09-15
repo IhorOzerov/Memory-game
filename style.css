@@ -16,6 +16,11 @@ body{
     align-items: center;
     background-color: rgb(218, 168, 93);
     padding: 10px;
+    -moz-user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }   
 
 .flipper.flip {
@@ -31,7 +36,7 @@ body{
     position: relative;
     cursor: pointer;
     width: 100px;
-    height: 100px
+    height: 100px;
 }
 
 .flipper:active{
