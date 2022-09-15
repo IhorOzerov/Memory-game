@@ -4,6 +4,20 @@ let boardLocked = false;
 let firstCard, secondCard;
 const CARDS = document.querySelectorAll(".flipper");
 const MAIN_BOARD = document.querySelector(".flip-container")
+const WIN_TABLE = document.querySelector(".winTable");
+const WIN_BUTTON = document.querySelector(".winButton");
+
+function winner() {
+  setTimeout(() => {
+    WIN_TABLE.style.display = 'grid';
+  }, 2000);
+};
+
+function tryAgain() {
+  WIN_TABLE.style.display = 'none'
+} 
+
+WIN_BUTTON.addEventListener('click', tryAgain);
 
 function flipCard(e){
   if (boardLocked === true) { return };
@@ -39,12 +53,13 @@ secondCard.style.pointerEvents = "none";
   
   matchedCard++; 
   if (matchedCard === 8) {
-    setTimeout(() => {                       
-      CARDS.forEach(card => {
-        card.style.pointerEvents = "auto";
-      })
-    return shuffleCard();
-    }, 2000);
+      setTimeout(() => {                       
+        CARDS.forEach(card => {
+          card.style.pointerEvents = "auto";
+        })
+      return shuffleCard();
+      }, 3000);
+    return winner();
 }};
 
 function unflipCards() { 
@@ -56,7 +71,7 @@ boardLocked = true;
     secondCard.classList.remove("flip");
     hasFlippedCard = false;
     boardLocked = false;
-    }, 800);
+    }, 1000);
   };
         
   function shuffleCard() {
@@ -66,7 +81,7 @@ boardLocked = true;
     CARDS.forEach(card => {
     card.addEventListener('click', flipCard);
     card.classList.remove("flip");
-      
+    
     const RANDOM_INDEX = Math.floor(Math.random() * CARDS.length);
     card.style.order = RANDOM_INDEX;
   })
