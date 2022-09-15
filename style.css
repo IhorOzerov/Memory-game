@@ -49,11 +49,11 @@ body{
 .front,
 .back {
     backface-visibility: hidden;
-    border: 1px solid black;
     position: absolute;
     width: 100px;
     height: 100px;
     background-color: rgb(239, 226, 194);
+    box-shadow: 1px 1px 2px rgb(218, 168, 93), -1px -1px 2px rgb(218, 168, 93);
 }
 
 .back {
@@ -101,6 +101,21 @@ body{
         width: 80px;
         height: 80px
     }
+    .winTable {
+        width: 80vw;
+        height: 80vw;
+        min-width: 400px;
+        min-height: 400px;
+    }
+    .winImage {
+        width: 40vw;
+    }
+    .winText {
+        font-size: 7vw;
+    }
+    .winButton {
+        font-size: 5vw;
+    }
 }
 
 @media (max-width: 439px) and (min-width: 370px) {
@@ -115,6 +130,21 @@ body{
         width: 65px;
         height: 65px;
     }
+    .winTable {
+        width: 80vw;
+        height: 80vw;
+        min-width: 320px;
+        min-height: 320px;
+    }
+    .winImage {
+        width: 40vw;
+    }
+    .winText {
+        font-size: 7vw;
+    }
+    .winButton {
+        font-size: 5vw;
+    }
 }
 
 @media (max-width: 369px) and (min-width: 300px) {
@@ -128,5 +158,20 @@ body{
     .back {
         width: 60px;
         height: 60px;
+    }
+    .winTable {
+        width: 80vw;
+        height: 80vw;
+        min-width: 320px;
+        min-height: 320px;
+    }
+    .winImage {
+        width: 42vw;
+    }
+    .winText {
+        font-size: 8vw;
+    }
+    .winButton {
+        font-size: 6vw;
     }
 }
