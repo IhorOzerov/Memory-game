@@ -21,6 +21,8 @@ body{
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    box-shadow: 1px 1px 2px rgb(218, 168, 93), -1px -1px 2px rgb(218, 168, 93);
+    border-radius: 5px;
 }   
 
 .flipper.flip {
@@ -56,6 +58,37 @@ body{
 
 .back {
     transform: rotateY(180deg);
+}
+
+.winTable {
+    grid-template-rows: repeat(3, 1fr);
+    position: absolute;
+    box-shadow: 2px 2px 3px antiquewhite, -2px -2px 3px antiquewhite;
+    border-radius: 5px;
+    width: 550px;
+    height: 550px;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.winImage {
+    width: 250px;
+}
+
+.winText {
+    font-family: 'Merienda';
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.winButton {
+    font-family: 'Merienda';
+    background-color: antiquewhite;
+    border: none;
+    font-size: xx-large;
+    cursor: pointer;
 }
 
 @media (max-width: 600px) and (min-width: 440px) {
