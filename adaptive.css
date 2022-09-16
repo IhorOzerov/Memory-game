@@ -1,0 +1,235 @@
+@media (max-width: 800px) and (min-width: 701px) {
+    body {
+        background-size: auto;
+    }
+    .sideImages :nth-child(1) {
+        margin-left: -75px;
+        height: 250px;
+    }
+    .sideImages :nth-child(2) {
+        height: 250px;
+        margin-right: -40px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 110px);
+        grid-template-rows: repeat(4, 110px);
+        padding: 13px;
+    }
+    .flipper,.front,.back {
+        width: 95px;
+        height: 95px
+    }
+    .winTable {
+        width: 68vw;
+        height: 68vw;
+        margin-bottom: 0px;
+    }
+    .winImage {
+        width: 35vw;
+    }
+    .winText {
+        font-size: 6vw;
+    }
+    .winButton {
+        font-size: 5vw;
+    }
+    .topic {
+        margin-top: 10px;
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    .mainText span {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 601px) {
+    body {
+        background-size: auto;
+    }
+    .sideImages :nth-child(1) {
+        margin-left: -60px;
+        height: 210px;
+    }
+    .sideImages :nth-child(2) {
+        height: 210px;
+        margin-right: -40px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 95px);
+        grid-template-rows: repeat(4, 95px);
+        padding: 10px;
+        margin-top: 60px;
+    }
+    .flipper,.front,.back {
+        width: 85px;
+        height: 85px
+    }
+    .winTable {
+        width: 67vw;
+        height: 67vw;
+        min-width: 360px;
+        min-height: 360px;
+        margin-bottom: 30px;
+    }
+    .winImage {
+        width: 35vw;
+    }
+    .winText {
+        font-size: 6vw;
+    }
+    .winButton {
+        font-size: 5vw;
+    }
+    .topic {
+        margin-top: 20px;
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+    .mainText span {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 440px) {
+    body {
+        background-size: auto;
+    }
+    .sideImages :nth-child(1) {
+        margin-left: -50px;
+        height: 35vw;
+    }
+    .sideImages :nth-child(2) {
+        height: 35vw;
+        margin-right: -40px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 85px);
+        grid-template-rows: repeat(4, 85px);
+        padding: 6px;
+        margin-bottom: 90px;
+    }
+    .flipper,.front,.back {
+        width: 75px;
+        height: 75px
+    }
+    .winTable {
+        width: 60vw;
+        height: 60vw;
+        min-width: 360px;
+        min-height: 360px;
+        margin-top: 0;
+    }
+    .winImage {
+        width: 40vw;
+    }
+    .winText {
+        font-size: 6vw;
+    }
+    .winButton {
+        font-size: 5vw;
+    }
+    .topic {
+        margin-top: 20px;
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+    .mainText span {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 439px) and (min-width: 370px) {
+    body {
+        background-size: auto;
+    }
+    .sideImages :nth-child(1) {
+        margin-left: -50px;
+        height: 180px;
+    }
+    .sideImages :nth-child(2) {
+        height: 180px;
+        margin-right: -40px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 78px);
+        grid-template-rows: repeat(4, 78px);
+        padding: 5px;
+        margin-bottom: 120px;
+    }
+    .flipper,.front,.back {
+        width: 68px;
+        height: 68px;
+    }
+    .winTable {
+        width: 80vw;
+        height: 80vw;
+        min-width: 330px;
+        min-height: 330px;
+        margin-bottom: 125px;
+    }
+    .winImage {
+        width: 40vw;
+    }
+    .winText {
+        font-size: 7vw;
+    }
+    .winButton {
+        font-size: 6vw;
+    }
+    .topic {
+        margin-top: 30px;
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+    .mainText span {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 369px) and (min-width: 300px) {
+    body {
+        background-size: auto;
+    }
+    .sideImages :nth-child(1) {
+        margin-left: -50px;
+        height: 180px;
+    }
+    .sideImages :nth-child(2) {
+        height: 180px;
+        margin-right: -40px;
+    }
+    .container {
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(4, 70px);
+        padding: 5px;
+        margin-top: -80px;
+    }
+    .flipper,.front,.back {
+        width: 60px;
+        height: 60px;
+    }
+    .winTable {
+        width: 85vw;
+        height: 85vw;
+        min-width: 290px;
+        min-height: 290px;
+        margin-bottom: 170px;
+    }
+    .winImage {
+        width: 42vw;
+    }
+    .winText {
+        font-size: 8vw;
+    }
+    .winButton {
+        font-size: 6vw;
+    }
+    .topic {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .mainText span {
+        font-size: 38px;
+    }
+}
