@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Cloister Black';
-    src: URL('CloisterBlack.ttf') format('truetype');
+    src: URL('./CloisterBlack.ttf') format('truetype');
 }
 body{
     overflow-y: hidden;
