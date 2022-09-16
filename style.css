@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Cloister Black';
+    src: URL('./CloisterBlack.ttf') format('truetype');
+  }
 body{
     overflow-y: hidden;
     background-image: url(./images/background.jpg);
