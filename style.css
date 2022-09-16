@@ -1,31 +1,39 @@
+@import url('http://fonts.cdnfonts.com/css/cloister-black');
+
 body{
     overflow-y: hidden;
-    background-color: rgb(239, 226, 194);
+    background-image: url(./images/background.jpg);
+    background-repeat: round;
+    background-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Cloister Black', sans-serif;
+    overflow-x: hidden;
 }
 
-.flip-container {
+.container {
     perspective: 1000px;
     display: grid;
     grid-template-columns: repeat(4, 120px);
     grid-template-rows: repeat(4, 120px);
     justify-items: center;
     align-items: center;
-    background-color: rgb(218, 168, 93);
+    background-color:#ba5137;
     padding: 10px;
     -moz-user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
-    box-shadow: 1px 1px 2px rgb(218, 168, 93), -1px -1px 2px rgb(218, 168, 93);
+    box-shadow: 1px 1px 2px #ba5137, -1px -1px 2px #ba5137;
     border-radius: 5px;
+    margin-top: 85px;
+    z-index: 1;
 }   
 
-.flipper.flip {
+.flipper.rotated{
     transform: rotateY(-180deg);
     transition: 0.6s linear;
     transform-style: preserve-3d;
@@ -52,8 +60,9 @@ body{
     position: absolute;
     width: 100px;
     height: 100px;
-    background-color: rgb(239, 226, 194);
-    box-shadow: 1px 1px 2px rgb(218, 168, 93), -1px -1px 2px rgb(218, 168, 93);
+    background-color:#344463;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #344463, -1px -1px 2px #344463;
 }
 
 .back {
@@ -63,115 +72,72 @@ body{
 .winTable {
     grid-template-rows: repeat(3, 1fr);
     position: absolute;
-    box-shadow: 2px 2px 3px antiquewhite, -2px -2px 3px antiquewhite;
+    box-shadow: 2px 2px 3px #b18e4c, -2px -2px 3px #b18e4c;
     border-radius: 5px;
-    width: 550px;
-    height: 550px;
-    background-color: antiquewhite;
+    width: 510px;
+    height: 510px;
+    background-color:#b18e4c;
+    display: grid;
     align-items: center;
     justify-content: center;
     display: none;
+    margin-top: 90px;
+    z-index: 1;
 }
 
 .winImage {
     width: 250px;
+    display: block;
 }
 
 .winText {
-    font-family: 'Merienda';
     text-align: center;
     font-size: xxx-large;
+    margin: 10px;
 }
 
 .winButton {
-    font-family: 'Merienda';
-    background-color: antiquewhite;
+    font-family: 'Cloister Black', sans-serif;
+    background-color: #b18e4c;
     border: none;
     font-size: xx-large;
     cursor: pointer;
 }
 
-@media (max-width: 600px) and (min-width: 440px) {
-    .flip-container {
-        grid-template-columns: repeat(4, 90px);
-        grid-template-rows: repeat(4, 90px);
-        padding: 15px;
-    }
-    .flipper,.front,.back {
-        width: 80px;
-        height: 80px
-    }
-    .winTable {
-        width: 80vw;
-        height: 80vw;
-        min-width: 400px;
-        min-height: 400px;
-    }
-    .winImage {
-        width: 40vw;
-    }
-    .winText {
-        font-size: 7vw;
-    }
-    .winButton {
-        font-size: 5vw;
-    }
+.topic {
+    position: absolute;
+    top: 0;
+    margin-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #151515;
 }
 
-@media (max-width: 439px) and (min-width: 370px) {
-    .flip-container {
-        grid-template-columns: repeat(4, 75px);
-        grid-template-rows: repeat(4, 75px);
-        padding: 10px;
-    }
-    .flipper,
-    .front,
-    .back {
-        width: 65px;
-        height: 65px;
-    }
-    .winTable {
-        width: 80vw;
-        height: 80vw;
-        min-width: 320px;
-        min-height: 320px;
-    }
-    .winImage {
-        width: 40vw;
-    }
-    .winText {
-        font-size: 7vw;
-    }
-    .winButton {
-        font-size: 5vw;
-    }
+.topic p {
+    margin: 0 0 10px 0;
 }
 
-@media (max-width: 369px) and (min-width: 300px) {
-    .flip-container {
-        grid-template-columns: repeat(4, 70px);
-        grid-template-rows: repeat(4, 70px);
-        padding: 10px;
-    }
-    .flipper,
-    .front,
-    .back {
-        width: 60px;
-        height: 60px;
-    }
-    .winTable {
-        width: 80vw;
-        height: 80vw;
-        min-width: 320px;
-        min-height: 320px;
-    }
-    .winImage {
-        width: 42vw;
-    }
-    .winText {
-        font-size: 8vw;
-    }
-    .winButton {
-        font-size: 6vw;
-    }
+.mainText span {
+    font-size: 70px;
+}
+
+.sideImages {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.sideImages :nth-child(1) {
+    margin-left: -70px;
+    height: 280px;
+}
+
+.sideImages :nth-child(2) {
+    height: 280px;
+    margin-right: -40px;
 }
