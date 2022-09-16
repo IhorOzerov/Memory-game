@@ -203,7 +203,7 @@
         grid-template-columns: repeat(4, 70px);
         grid-template-rows: repeat(4, 70px);
         padding: 5px;
-        margin-top: -80px;
+        margin-bottom: 170px;
     }
     .flipper,.front,.back {
         width: 60px;
