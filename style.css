@@ -105,12 +105,13 @@ body{
     border: none;
     font-size: 45px;
     cursor: pointer;
+    color: black;
 }
 
 .topic {
     position: absolute;
     top: 0;
-    margin-top: 50px;
+    margin-top: 15px;
     font-size: 40px;
     text-align: center;
     letter-spacing: 3px;
@@ -132,7 +133,11 @@ body{
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
-
+    -moz-user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .sideImages :nth-child(1) {
