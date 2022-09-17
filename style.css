@@ -2,11 +2,12 @@
     font-family: 'Cloister Black';
     src: URL('./CloisterBlack.ttf') format('truetype');
 }
+
 body{
     overflow-y: hidden;
     background-image: url(./images/background.jpg);
     background-repeat: round;
-    background-size: 100%;
+    background-size: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,13 +89,13 @@ body{
 }
 
 .winImage {
-    width: 250px;
+    width: 270px;
     display: block;
 }
 
 .winText {
     text-align: center;
-    font-size: xxx-large;
+    font-size: 50px;
     margin: 10px;
 }
 
@@ -102,7 +103,7 @@ body{
     font-family: 'Cloister Black', sans-serif;
     background-color: #b18e4c;
     border: none;
-    font-size: xx-large;
+    font-size: 45px;
     cursor: pointer;
 }
 
@@ -135,11 +136,11 @@ body{
 }
 
 .sideImages :nth-child(1) {
-    margin-left: -70px;
-    height: 280px;
+    margin-left: -90px;
+    height: 340px;
 }
 
 .sideImages :nth-child(2) {
-    height: 280px;
-    margin-right: -40px;
+    height: 340px;
+    margin-right: -60px;
 }
